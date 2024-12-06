@@ -12,7 +12,6 @@
 		padding: 6rem 0.75rem 1rem;
 		border-radius: 1rem;
 		border: 4px solid var(--container-color);
-		cursor: pointer;
 		&:hover .popular__img {
 			transform: translateY(-0.5rem);
 		}
@@ -53,5 +52,62 @@
 		font-size: 1.25rem;
 		display: inline-flex;
 		cursor: pointer;
+	}
+}
+
+@media screen and (max-width: 330px) {
+	.popular {
+		&__container {
+			grid-template-columns: 160px;
+			justify-content: center;
+		}
+	}
+}
+
+@media screen and (min-width: 540px) {
+	.popular {
+		&__container {
+			grid-template-columns: repeat(2, 160px);
+			justify-content: center;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.popular {
+		&__container {
+			grid-template-columns: repeat(3, 160px);
+			justify-content: center;
+		}
+	}
+}
+
+@media screen and (min-width: 1150px) {
+	.popular {
+		&__container {
+			grid-template-columns: repeat(3, 250px);
+			gap: 6.5rem 4rem;
+			padding-block: 3rem;
+		}
+		&__card {
+			padding: 9.5rem 1.25rem 1.25rem;
+			border-radius: 2rem;
+			border-width: 6px;
+		}
+		&__img {
+			width: 200px;
+			top: -3.5rem;
+		}
+		&__title {
+			font-size: var(--h2-font-size);
+		}
+		&__price {
+			font-size: var(--h1-font-size);
+		}
+		&__button {
+			font-size: 1.5rem;
+			right: 1.25rem;
+			bottom: 1.25rem;
+		}
 	}
 }

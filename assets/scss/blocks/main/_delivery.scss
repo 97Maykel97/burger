@@ -30,3 +30,37 @@
 		filter: var(--shadow-big-img);
 	}
 }
+
+@media screen and (min-width: 540px) {
+	.delivery {
+		&__container {
+			grid-template-columns: 360px;
+			justify-content: center;
+		}
+	}
+}
+
+@media screen and (min-width: 1150px) {
+	.delivery {
+		&__container {
+			grid-template-columns: 440px 550px;
+			column-gap: 4rem;
+			align-items: center;
+			padding-block: 1rem;
+			.section__title,
+			&__data {
+				text-align: inherit;
+			}
+		}
+		&__description {
+			margin-bottom: 3.5rem;
+		}
+		&__sticker {
+			width: 50px;
+			bottom: 0;
+		}
+		&__img {
+			width: 550px;
+		}
+	}
+}

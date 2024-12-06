@@ -58,3 +58,58 @@
 		font-size: var(--small-font-size);
 	}
 }
+
+@media screen and (max-width: 330px) {
+	.recipe {
+		&__container {
+			column-gap: 5rem;
+		}
+		&__img {
+			left: -7rem;
+		}
+	}
+}
+
+@media screen and (min-width: 540px) {
+	.recipe {
+		&__container {
+			grid-template-columns: 200px 230px;
+			justify-content: center;
+			column-gap: 3rem;
+		}
+		&__img {
+			position: initial;
+		}
+	}
+}
+
+@media screen and (min-width: 1150px) {
+	.recipe {
+		&__container {
+			grid-template-columns: 350px 300px;
+			column-gap: 8rem;
+			padding-bottom: 3rem;
+		}
+		&__img {
+			width: 350px;
+		}
+		&__card {
+			column-gap: 1rem;
+		}
+		&__box {
+			width: 100px;
+			height: 100px;
+			border-radius: 1.25rem;
+			border-width: 5px;
+			img {
+				width: 85px;
+			}
+		}
+		&__title {
+			font-size: var(--h3-font-size);
+		}
+		&__description {
+			font-size: var(--normal-font-size);
+		}
+	}
+}

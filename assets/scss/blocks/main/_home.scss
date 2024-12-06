@@ -50,7 +50,7 @@
 	}
 
 	&__burger {
-		max-width: 280px;
+		width: 280px;
 		z-index: 2;
 	}
 
@@ -109,5 +109,100 @@
 	transition: box-shadow 0.4s;
 	&:hover {
 		box-shadow: 0 8px 24px hsla(22, 100%, 8%, 0.2);
+	}
+}
+
+@media screen and (max-width: 330px) {
+	.container {
+		margin-inline: 1rem;
+	}
+
+	.home {
+		&__title {
+			font-size: 2.5rem;
+		}
+		&__burger {
+			max-width: 210px;
+		}
+		&__dish {
+			width: 250px;
+			bottom: -2rem;
+		}
+	}
+}
+
+@media screen and (min-width: 540px) {
+	.home {
+		&__container {
+			grid-template-columns: 360px;
+			justify-content: center;
+		}
+	}
+}
+
+@media screen and (min-width: 1150px) {
+	.home {
+		&__container {
+			grid-template-columns: 430px 605px;
+			justify-content: center;
+			column-gap: 4rem;
+			padding-bottom: 7rem 4rem;
+		}
+		&__data {
+			text-align: inherit;
+		}
+		&__description {
+			margin-bottom: 3.5rem;
+			padding-right: 3rem;
+		}
+		&__sticker {
+			width: 60px;
+			right: 10rem;
+			bottom: 1rem;
+		}
+		&__burger {
+			width: 490px;
+		}
+		&__dish {
+			width: 560px;
+			bottom: -4rem;
+		}
+		&__ingredient {
+			width: 100px;
+		}
+		&__potato {
+			&-1 {
+				left: -2rem;
+				top: 1.5rem;
+			}
+			&-2 {
+				right: -1.5rem;
+				bottom: -3rem;
+			}
+		}
+
+		&__tomato {
+			&-1 {
+				width: 70px;
+				top: -1.5rem;
+				right: 10rem;
+			}
+			&-2 {
+				width: 70px;
+				left: 9.5rem;
+				bottom: -2.5rem;
+			}
+		}
+
+		&__lettuce {
+			&-1 {
+				top: 4rem;
+				right: -3.5rem;
+			}
+			&-2 {
+				left: -3.5rem;
+				bottom: 2rem;
+			}
+		}
 	}
 }
